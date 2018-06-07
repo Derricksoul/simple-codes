@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+
+int main(){
+	int i,j,k;
+	srand(time(0));
+	k=rand()%100+1;
+	printf("请输入你猜的数\n");
+	for(i=1;i<=10;i++){
+		scanf("%d",&j);
+		if(j<k){
+			printf("你猜的数太小了\n"); 
+		}else if(j==k){
+			printf("恭喜你猜对了，你一共猜了%d次",i); 
+		}else if(j>k){
+			printf("你猜的数太大了\n"); 
+		}
+	}
+	if(i>10){
+		printf("你未能猜中这个数，这个数为%d",k); 
+	}
+} 
